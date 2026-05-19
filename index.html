@@ -14,23 +14,28 @@
   <meta property="og:description" content="Join the early access list for PoraPop’s first Sri Lankan-inspired drop." />
   <meta property="og:url" content="https://porapop.lk/" />
   <meta property="og:image" content="https://porapop.lk/assets/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="PoraPop" />
 
   <!-- Twitter / X Preview -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="PoraPop | Small piece. Big vibe." />
   <meta name="twitter:description" content="Join the early access list for PoraPop’s first Sri Lankan-inspired drop." />
   <meta name="twitter:image" content="https://porapop.lk/assets/images/og-image.png" />
+  <meta name="twitter:url" content="https://porapop.lk/" />
 
   <!-- Favicon: replace with /favicon.png later if you export the real logo icon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon.png">
-  <link rel="apple-touch-icon" href="/assets/favicon/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/favicon.png">
 
   <title>PoraPop | Small piece. Big vibe.</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="/assets/images/primary-logo-tagline.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
@@ -63,6 +68,20 @@
     }
     
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PoraPop",
+    "url": "https://porapop.lk/",
+    "logo": "https://porapop.lk/assets/images/primary-logo-tagline.png",
+    "description": "PoraPop is a Sri Lankan-inspired collectibles brand creating playful keytags, stickers, mini gifts, and tiny keepsakes.",
+    "sameAs": [
+      "https://instagram.com/porapoplk",
+      "https://tiktok.com/@porapop.lk"
+    ]
+  }
+  </script>
   <!-- Google Analytics 4: free basic analytics. Replace G-XXXXXXXXXX with your Measurement ID. -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SVPB1JQMLS"></script>
   <script>
@@ -83,10 +102,12 @@
 
     <nav class="relative z-10 mx-auto mb-0 flex max-w-7xl items-center justify-between sm:mb-2" aria-label="Main navigation">
       <a href="#top" class="flex items-center" aria-label="PoraPop home">
-        <img src="./assets/images/primary-logo-tagline.png" 
+        <img src="/assets/images/primary-logo-tagline.png" 
              alt="PoraPop - Small piece. Big vibe." 
              class="block h-auto w-[180px] sm:w-[250px] lg:w-[290px]" 
-             decoding="async" />
+             decoding="async"
+             loading="eager"
+             fetchpriority="high" />
       </a>
 
       <a href="#notify" class="hidden rounded-full bg-[#1B1B1B] px-6 py-3 text-sm font-extrabold text-white transition hover:bg-[#FF5A36] active:scale-95 focus:outline-none focus:ring-4 focus:ring-[#FF5A36]/30 sm:inline-flex">Notify Me</a>
@@ -207,17 +228,16 @@
     <div class="mt-4 flex justify-center gap-4 text-sm font-semibold text-[#1B1B1B]/60">
       <a href="https://instagram.com/porapoplk" target="_blank" rel="noopener noreferrer"
         onclick="if (typeof gtag === 'function') { gtag('event','social_click',{platform:'instagram_footer'}); }"
-        class="hover:text-[#FF5A36] transition">
+        class="transition hover:text-[#FF5A36]">
         Instagram
-      </a>    
-      <span>•</span>    
+      </a>
+      <span>•</span>
       <a href="https://tiktok.com/@porapop.lk" target="_blank" rel="noopener noreferrer"
         onclick="if (typeof gtag === 'function') { gtag('event','social_click',{platform:'tiktok_footer'}); }"
-        class="hover:text-[#FF5A36] transition">
+        class="transition hover:text-[#FF5A36]">
         TikTok
-      </a>    
+      </a>
     </div>
-
   </footer>
 
 
